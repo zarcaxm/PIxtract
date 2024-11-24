@@ -4,3 +4,12 @@ backend/app/models/__pycache__
 backend/app/routes/__pycache__
 backend/app/models/spacyM1
 backend/paware
+backend/sample.docx
+backend/sample.txt
+backend/simpleNltk.docx
+backend/simpleNltk.txt
+backend/spacyM1.txt
+backend/app/models/nltkM1.pkl
+backend/app/models/nltkM2.pkl
+backend/app/models/nltkSimple.pkl
+backend/app/models/simpleNltk.docx

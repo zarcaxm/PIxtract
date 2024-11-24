@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PERSONWARE</title>
+    <title>PIxtract</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,46 +17,72 @@
             padding-top: 50px;
         }
 
-        form {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            margin-bottom: 20px;
-        }
-
-        label,
-        select,
-        input[type="file"],
-        input[type="submit"] {
-            display: block;
-            width: 100%;
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
             margin-bottom: 10px;
         }
 
+        h2 {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            margin-bottom: 40px;
+        }
+
         label {
+            font-size: 1rem;
+            color: #333;
             margin-bottom: 5px;
         }
 
+        select,
+        input[type="file"],
         input[type="submit"] {
-            background-color: #4CAF50;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
             color: white;
             border: none;
-            padding: 10px;
             cursor: pointer;
-            font-size: 16px;
+            transition: background-color 0.3s ease;
+            font-size: 1.1rem;
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #333;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
         }
     </style>
 </head>
 
 <body>
+    <h1>PIxtract</h1>
+    <h2>Extração de Informação Pessoal</h2>
+
     <form action="/uploadfile/" enctype="multipart/form-data" method="post">
-        <label for="library">Libraria NER:</label>
+        <label for="library">Biblioteca NER:</label>
         <select name="library" id="library" required>
             <option value="spaCy">spaCy</option>
             <option value="NLTK">NLTK</option>
@@ -73,6 +99,8 @@
         <input name="file" id="file" type="file" required>
         <input type="submit" value="Enviar">
     </form>
+
+    <footer>Este é um protótipo. Algumas funcionalidades podem estar limitadas.</footer>
 </body>
 
 </html>

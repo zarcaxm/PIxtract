@@ -7,8 +7,8 @@
     <title>NER Results</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,14 +17,26 @@
             padding-top: 50px;
         }
 
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #666;
+        }
+
         .results {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 800px;
-            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 900px;
+            margin-bottom: 30px;
+            text-align: center;
         }
 
         table {
@@ -36,89 +48,62 @@
         th,
         td {
             text-align: left;
-            padding: 8px;
+            padding: 12px;
         }
 
         tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
             background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 50px;
-        }
-
-        .results {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 800px;
-            margin-bottom: 20px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
-        }
-
-        th,
-        td {
-            text-align: left;
-            padding: 8px;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
         }
 
         th {
-            background-color: #4CAF50;
+            background-color: #333;
             color: white;
         }
 
         button {
             margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            padding: 12px 24px;
+            background-color: #333;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #333;
+        }
+
+        #pagination-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #page-info {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .results {
+                width: 95%;
+                padding: 20px;
+            }
+
+            table,
+            th,
+            td {
+                font-size: 0.9rem;
+            }
+
+            button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
@@ -137,7 +122,7 @@
                 </tr>
             </thead>
             <tbody id="table-body">
-                <!-- Rows will be dynamically added here -->
+                <!-- Linhas adicionadas -->
             </tbody>
         </table>
 
